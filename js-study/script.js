@@ -23,14 +23,14 @@ for(let number = 1; number <= 100; number += 1){
 }
 
 for (let number = 1; number <= 100 ;number += 1) {
-  
+
   // if文を用いて、numberが3の倍数の時に「3の倍数です」、そうでないときは数字を出力
   if (number % 3 == 0){
    console.log("3の倍数です");
   }else{
    console.log(number);
   }
-}  
+}
 
 // 配列
 const animals = ['dog','cat','sheep'];
@@ -84,3 +84,53 @@ console.log(character);
 // オブジェクトの値を取り出すには、対応するプロパティ名を用いて 、
 // 「オブジェクト.プロパティ名」とする
 console.log(character.age);
+
+// オブジェクトを要素に持つ配列
+// 配列の要素には、文字列や数値だけでなく、オブジェクトも使うことができる
+// const characters = [
+//   {name: "にんじゃわんこ", age: 14},
+//   {name: "ひつじ仙人", age: 1000}
+// ];
+
+// 配列の中のオブジェクトのプロパティの値を取り出すには、
+// 「配列[インデックス番号].プロパティ名」と書く
+// charactersの2つ目の要素の「name」に対応する値をコンソールに出力
+// console.log(characters[1].name);
+
+const students = [
+  {name: "ジョニー", age: 14},
+  {name: "リリー", age: 100},
+  {name: "ジョン", age: 5},
+];
+
+// for文を完成させてください
+for (let i = 0 ; i < students.length ; i++ ) {
+  console.log("--------------------");
+
+  // 定数characterを定義してください
+  const student = students[i];
+
+  // 「名前は〇〇です」を出力してください
+
+  console.log(`名前は${student.name}です`);
+  // 「〇〇歳です」を出力してください
+
+  console.log(`${student.age}歳です`) ;
+}
+
+// for (let i = 0; i < characters.length; i++) {
+//   console.log("--------------------");
+  
+//   const character = characters[i];
+  
+//   console.log(`名前は${character.name}です`);
+  
+//   // if文を追加してください
+//   if (character.age == undefined){
+    
+//     console.log("年齢は秘密です");
+//   } else {
+//     console.log(`${character.age}歳です`);
+//   }
+  
+// }
